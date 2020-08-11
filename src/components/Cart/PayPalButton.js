@@ -6,6 +6,7 @@ export default class PatPalButton extends React.Component {
     const onSuccess = (payment) => {
       // Congratulation, it came here means everything's fine!
       console.log("The payment was succeeded!", payment);
+      alert("The payment was succeeded!");
       this.props.clearCart();
       this.props.history.push("/");
       // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data

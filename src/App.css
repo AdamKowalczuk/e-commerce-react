@@ -43,6 +43,10 @@ body {
   border-radius: 0 !important;
   border: 0.1rem solid var(--mainLight) !important;
 }
+.btn-light:hover {
+  background: var(--mainGreen) !important;
+  color: var(--mainWhite) !important;
+}
 .cart-icon {
   cursor: pointer;
   font-size: 1.2rem;
