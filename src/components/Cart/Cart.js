@@ -5,7 +5,6 @@ import EmptyCart from "./EmptyCart";
 import { ProductConsumer } from "../../context";
 import CartList from "./CartList";
 import CartTotals from "./CartTotals";
-import PayPalButton from "./PayPalButton";
 
 export default class Cart extends Component {
   render() {
