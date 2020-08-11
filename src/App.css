@@ -1,14 +1,16 @@
 :root {
-  --mainBlue: #2a2a72;
-  --lightBlue: #009ffd;
-  --mainWhite: #f3f3f3;
-  --mainDark: #232528;
-  --mainYellow: #ffa400;
+  --mainGreen: #1ba098;
+  --mainDark: #051622;
+  --mainLight: #deb992;
+  --mainRed: #fa2742;
+  --mainBlue: #3cbcc3;
+  --mainViolet: #5626c4;
+  --mainWhite: white;
 }
 body {
   font-family: "Oswald", sans-serif !important;
-  background: var(--mainWhite) !important;
-  color: var(--mainDark) !important;
+  background: var(--mainDark) !important;
+  color: var(--mainLight) !important;
 }
 .text-title {
   font-family: "Permanent Marker", cursive;
@@ -16,8 +18,38 @@ body {
   text-transform: uppercase;
 }
 .text-blue {
-  color: var(--mainBlue);
+  color: var(--mainGreen);
 }
 .text-bright {
-  color: var(--lightBlue);
+  color: var(--mainRed);
+}
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainDark) !important;
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+.btn-black:hover {
+  background: var(--mainGreen) !important;
+  color: var(--mainWhite) !important;
+}
+.btn-light {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainLight) !important;
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainLight) !important;
+}
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainRed);
+}
+.cursive-font {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 900;
+  letter-spacing: 3px;
 }

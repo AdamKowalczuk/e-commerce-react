@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import styled from "styled-components";
-import { ButtonContainer } from "./Button";
 
 export default class Navbar extends Component {
   render() {
@@ -15,19 +14,19 @@ export default class Navbar extends Component {
           <img src={logo} alt="store" className="navbar-brand" />
         </Link>
         <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
+          <li className="nav-item ml-5 cursive-font">
             <Link to="/" className="nav-link">
-              products
+              Nerd Shop
             </Link>
           </li>
         </ul>
         <Link to="/cart" className="ml-auto">
-          <ButtonContainer>
+          <NavbarButton>
             <span className="mr-2">
               <i className="fas fa-cart-plus" />
             </span>
             My cart
-          </ButtonContainer>
+          </NavbarButton>
         </Link>
       </NavWrapper>
     );
@@ -35,10 +34,32 @@ export default class Navbar extends Component {
 }
 
 const NavWrapper = styled.nav`
-  background: var(--mainBlue);
+  background: var(--mainGreen);
   .nav-link {
-    color: var(--mainWhite) !important;
-    font-size: 1.3rem;
+    color: var(--mainDark) !important;
+    font-size: 1.6rem;
     text-transform: capitalize;
   }
+`;
+
+const NavbarButton = styled.button`
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  background: transparent;
+  border: 0.05rem solid var(--mainDark);
+  border-color:${(props) =>
+    props.cart ? "var(--mainRed)" : "var(--mainDark)"};
+  color:${(prop) => (prop.cart ? "var(--mainRed)" : "var(--mainDark)")};
+  border-radius: 0.5rem;
+  padding 0.2rem 0.5rem;
+  cursor:pointer;
+  margin:0.2rem 0.5rem 0.2rem 0;
+  transition:all 0.5s ease-in-out;
+&:hover{
+    background:${(prop) => (prop.cart ? "var(--mainRed)" : "var(--mainDark)")};
+    color:var(--mainLight);
+}
+&:focus{
+    outline:none;
+}
 `;
