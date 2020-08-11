@@ -52,11 +52,11 @@ body {
   font-size: 1.2rem;
   color: var(--mainRed);
 }
+.cart-icon {
+  color: var(--mainGreen);
+}
 .cursive-font {
   font-family: "Permanent Marker", cursive;
   font-weight: 900;
   letter-spacing: 3px;
-}
-.remove-button:hover {
-  color: var(--mainGreen);
 }
