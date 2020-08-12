@@ -55,7 +55,7 @@ export default class Details extends Component {
                     <ButtonContainer
                       cart
                       disabled={inCart ? true : false}
-                      ocClick={() => {
+                      onClick={() => {
                         value.addToCart(id);
                         value.openModal(id);
                       }}
